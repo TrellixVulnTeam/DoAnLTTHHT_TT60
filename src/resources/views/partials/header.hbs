@@ -1,16 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">Dev</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/courses/create">Thêm Review</a>
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container">
+    <a class="navbar-brand" href="/">Dev</a>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mt-3">
+        <li class="nav-item mr-5">
+          <form action="/search" method="GET">
+            <div class="form-group d-flex">
+              <input class="form-control" name="search" size="50" type="text" placeholder="Search product…">
+              <button href="/search" class="btn btn-primary ml-2">Search</button>
+            </div>
+          </form>
+        </li>
+        <li class="nav-item ml-5 dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Manager
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/info">Info</a>
+            <a class="dropdown-item" href="/admin">Admin</a>
+            <hr>
+            <a class="dropdown-item" href="/">LogOut</a>
+          </div>
+      </ul>
+    </div>
   </div>
 </nav>

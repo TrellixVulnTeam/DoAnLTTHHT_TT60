@@ -1,7 +1,7 @@
-class NewsControllers {
+class InfoController {
     // [GET] /news
     news(req,res){
-        res.render('news');
+        res.render('info');
     }
 
     // [GET /news/:path]
@@ -9,4 +9,4 @@ class NewsControllers {
         res.send('newdetail')
     }
 }
-module.exports = new NewsControllers;
+module.exports = new InfoController;

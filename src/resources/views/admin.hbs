@@ -1,0 +1,31 @@
+<div class="mt-4 text-center">
+    <h3>Book Manager</h3>
+    <div class="mx-auto text-right">
+        <a class="nav-link" href="/courses/create"><button class="btn btn-success">Add Products</button></a>
+    </div>
+    <table class="table mt-4 text-left">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Description</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each courses}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.image}}</td>
+                <td>{{this.name}}</td>
+                <td>
+                    <a href="/courses/{{this._id}}/edit" class="btn btn-link">Edit</a>
+                    <a href="" class="btn btn-link">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

@@ -13,7 +13,13 @@ class SitesController {
     }
     // [GET /search]
     search(req, res) {
-        res.render('search')
+        Course.find({ name: new RegExp(req.query.search, 'i') })
+            .then(courses => {
+                res.render('home', {
+                    courses: fetchCourses(courses)
+                })
+            })
+            .catch()
     }
 }
 module.exports = new SitesController;
